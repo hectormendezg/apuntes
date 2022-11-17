@@ -1,0 +1,77 @@
+ 
+                      #####################################
+                      ##              Git                ##
+		      #####################################		
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""  CONFIGURACION INICIAL
+""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+git config --global user.name "Hector Mendez"
+git config --global user.email hector.mendez@tecnosecurity.net
+git config --global core.editor "code --wait"
+git config --global -e //====> Muestra la configuración
+git config --global core.autocrlf input
+git config --list => Muestra las configuraciones de git.
+
+git config --global credential.helper store //====> Guarda las credenciales en la maquina (Linux)
+
+
+""""""""""""""""""""""""""""""""""""""""
+""     COMANDOS ADICIONALES
+""
+""""""""""""""""""""""""""""""""""""""""
+git log --oneline //===> Muesta todas la versiones de un Proyecto (o commits)
+git checkout "n° de version o commit" //===> nos permite volver a una version anterior del repo
+git switch - //===> nos lleva a la ultima version
+git branch -a //===> muestra las ramas remotas y locales
+
+
+""""""""""""""""""""""""""""""""""""""""
+""     SUBIR PROYECTO 
+""
+""""""""""""""""""""""""""""""""""""""""
+
+git add .
+
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/nombre_del_proyecto.git
+git push -u origin main
+
+git pull --rebase origin hector //===> Sincronizar con repo remoto!
+
+
+""""""""""""""""""""""""""""""""""""""""
+""     Tips
+""
+""""""""""""""""""""""""""""""""""""""""
+git clone https://github.com/nombre_del_repo.git -b "branch" //===> Clonamos la rama q deseamos
+git switch "nombre de la rama //===> Sirve para saltar de Ramas
+git checkout "Nombre de la rama o N° de commit"//===> Para saltar de Rama o cambiar de version del repo
+
+git reset --soft "N° de commit" //===> Modifica el cambio y lo deja en unstage
+git reset --mixed "N° de commit" //===> Modkfica el cambio y lo deja working directory
+git reset --hard "N° de commit" //===> Elimina por complete el archivo y deja el repo en el utimo funcional
+
+git -- version  => Muestra la version de Git instalada en el SO.
+git init  => Inicializa el el repositorio.
+git status => Muestra el estado actual del repositorio.
+
+
+""""""""""""""""""""""""""""""""""""""""
+""     Fusion de Ramas
+""
+""""""""""""""""""""""""""""""""""""""""
+1.- Realizar un Pull a la rama principal(master)
+2.- Estando ubicados en la rama principal, realizamos "git merge con la rama a fusionar"
+3.- Eliminar rama remota "git push --delete "nombre de la rama" "
+4.- Eliminar rama local "git branch -d "nombre de la rama"
+
+
+
+
+
